@@ -65,7 +65,8 @@ public class Block {
 	 */
 	public void shuffleBlocks(Cluster cluster) {
 		// On réplique le bloc le bon nombre de fois
-		for (int i = 0; i < this.replication-this.nodes.size(); i++) {
+		int size = this.nodes.size();
+		for (int i = 0; i < this.replication-size; i++) {
 			this.addNode(cluster.getRandomNode());
 		}
 	}
