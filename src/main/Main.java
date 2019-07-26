@@ -42,7 +42,7 @@ public class Main {
 				double errorRate = clusters[replication].getFullErrorRate();
 				
 				// Ajoute la valeur
-				line += errorRate + ";";
+				line += String.format("%.5f", errorRate) + ";";
 				
 			}
 			
